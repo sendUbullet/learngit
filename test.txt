@@ -1,0 +1,13 @@
+git reset HEAD^ //回退至上一版本, 并重置缓存区
+git reset HEAD~10 //回退至10个版本之前, 并重置缓存区
+git reset --soft HEAD //回退时不重置缓存区和工作区
+git reset --mixed HEAD //回退时重置缓存区, 默认选项
+git reset --hard HEAD //回退时重置缓存区和工作区
+git reset //不指定HEAD, 用来清空缓存区的修改
+git reset filename //清空缓存区指定文件的修改
+git reset --hard //不指定HEAD, 用来清空工作区和缓存区的修改
+git reset --hard filename //清空工作区和缓存区指定文件的修改
+git checkout branch //切换branch, 同时重置缓存区和工作区, 如果工作区有修改没有提交, 需要先commit或stash
+git checkout branch --force //切换branch, 同时重置缓存区和工作区
+git checkout --force //不指定branch, 用来清空工作区的修改(缓存区不变, 如果之前有add, 则工作区与缓存区一致)
+git checkout -- filename //清空工作区指定文件的修改
